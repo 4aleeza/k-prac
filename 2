@@ -1,0 +1,19 @@
+fun askname() : String {
+    println("Enter Name: ")
+    val name = readLine() ?: "Stranger" //to handle null vals safely
+    return name
+}
+fun askvibes(user: String) : Unit {
+    println("If I had to give you 3 options, from Bad, Good, idk, how'd you pick your day to be? : ")
+    val vibes = readLine()?: "uhh"
+    when (vibes) {
+        "Bad"->println("Aww, $user:(")
+        "Good"->println("Yayy, $user! :)")
+        "idk"->println("Well, I do wish you a great one, $user")
+        else->println("Not much of a talker eh?")
+    }
+}
+fun main(){
+    val name = askname()
+    askvibes(name)
+}
