@@ -1,0 +1,32 @@
+fun add(n1 : Float, n2 : Float) : Float {
+    return (n1 + n2)
+}
+fun sub(n1 : Float, n2 : Float) : Float {
+    return (n1-n2)
+}
+fun div(n1 : Float, n2 : Float) : Float {
+    return (n1/n2)
+}
+fun mul(n1 : Float, n2 : Float) : Float {
+    return (n1*n2)
+}
+fun main(){
+    println("Welcome To Kotlin Calculator!")
+    println("n1: ")
+    val n1 = readLine()?.toFloatOrNull()?: 0f
+    println("n2: ")
+    val n2 = readLine()?.toFloatOrNull()?: 0f
+    println("1-add, 2-sub, 3-div, 4-prod, 5-exit: ")
+    val ans = readLine()?: "None"
+    when (ans.lowercase()) {
+        "add"-> println("Result: ${add(n1 , n2)}")
+        "sub"-> println("Result: ${sub(n1, n2)}")
+        "mul" -> println("Result: ${mul(n1, n2)}")
+        "div"-> {
+            if (n2==0f) println ("Cannot Divide By 0")
+            else println("Result: ${div(n1, n2)}")
+        }
+        else->println("Thankyou for checking out!")
+    }
+
+}
