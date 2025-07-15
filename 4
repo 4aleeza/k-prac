@@ -1,0 +1,26 @@
+fun askname() : String {
+    println("Enter Name: ")
+    val name = readLine()?: ""
+    return name
+}
+fun askshows(shows : Array<String>,num : Int) : Unit {
+    for (i in 0 until num){
+        print("Enter Show ${i+1}: ")
+        shows[i] = readLine()?: ""
+    }
+}
+fun display(shows: Array<String>, name : String) {
+    println("$name's top Netflix Shows are: ")
+    shows.forEach {
+        println(it)
+    }
+}
+fun main(){
+
+    println("How Many Shows Do You Like? ")
+    val num = readLine()?.toIntOrNull()?: 0
+    //create empty string array
+    val shows = Array(num){""}
+    askshows(shows, num)
+    display(shows, askname())
+}
