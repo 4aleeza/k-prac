@@ -1,0 +1,48 @@
+//var greeting = "hello"
+//var greeting: String? = null
+fun main() {
+    /*-
+    * we have mutable variables,
+    * which can have their vals reassigned
+    * those are 'vars'
+    * 'vals' are only defined once
+    * */
+//    val name: String = "Nate"
+//    //cannot reassign
+//    var name2: String = "Liz"
+//    name2 = "Aliza"
+//    println(name)
+//    println(name2)
+    /*you can also
+    * define variables outside of the main function and those would be called
+    * top level variables */
+    //types are non-null by default
+    //var name3: String = null is wrong
+//    var name3: String? = "Abdul"
+//    greeting = "ola"
+//    println(greeting+" "+name3)
+////    println(name3)
+//    if (greeting!=null){
+//        println(greeting+"Alan")
+//    }
+//    else println("Hello Alan!")
+//    greeting = "Hello"
+//    when (greeting) {
+//        null->println("Hi")
+//        "Hello"->println("Ho Ho Ho")
+//        else->println("Goodbye")
+//    }
+//    val greetinToprint = if (greeting!=null) greeting else greeting="Hello"
+//    val greetingtoprint = when(greeting){
+//        null->greeting="Hi"
+//        else->greeting
+//    }
+    val name: String = "Nathaniel"
+    fun getgreeting() : String {
+        return "Hello Kotlin"
+    }
+    fun sayhi() {
+        println(getgreeting()+" "+name)
+    }
+    sayhi()
+}
