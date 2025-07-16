@@ -1,0 +1,9 @@
+fun sayhello(greeting:String, vararg names:String){
+    names.forEach { names->
+        println("$greeting, $names!")
+    }
+}
+fun main(){
+    val names = arrayOf("Abdul", "Ahmad", "Robin")
+    sayhello( names=*names,greeting="Hello")
+}
